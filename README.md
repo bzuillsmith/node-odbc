@@ -6,12 +6,23 @@ drivers.
 
 requirements
 ------------
+### Unix ###
 
 * unixODBC binaries and development libraries for module compilation
   * on Ubuntu/Debian `sudo apt-get install unixodbc unixodbc-dev`
   * on OSX using macports.org `sudo port unixODBC`
 * odbc drivers for target database
 * properly configured odbc.ini and odbcinst.ini.
+
+### Windows ###
+
+#### MS Access #####
+MS Office usually installs 32-bit drivers incompatibile with 64-bit programs such as node.js 64-bit.
+
+Systems with both node.js 64-bit and MS Office 32-bit must uninstall MS office and either install MS Office 64-bit or download and install the 64-bit drivers here: http://www.microsoft.com/en-us/download/details.aspx?id=13255
+After installing the drivers, MS Office 32-bit can be reinstalled (assuming you did not choose to install MS Office 64-bit).
+
+Of course, if you do not have MS Office installed, simply download the drivers matching your node.js architecture from the link above.
 
 install
 -------
